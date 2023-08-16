@@ -3,8 +3,6 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  ECR_IMAGE_URI: "506327011578.dkr.ecr.us-east-1.amazonaws.com/tienvq"
-  VERSION_TAG: "3"
   DB_NAME: "postgres"
   DB_HOST: "coworking-db-postgresql.default.svc.cluster.local"
   DB_PORT: "5432"

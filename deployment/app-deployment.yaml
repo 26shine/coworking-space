@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: coworking-space
-          image: "506327011578.dkr.ecr.us-east-1.amazonaws.com/tienvq:3"
+          image: "506327011578.dkr.ecr.us-east-1.amazonaws.com/tienvq:0.0.2"
           imagePullPolicy: Always
           livenessProbe:
             httpGet:
@@ -44,16 +44,6 @@ spec:
             initialDelaySeconds: 5
             timeoutSeconds: 5
           env:
-            - name: ECR_IMAGE_URI
-              valueFrom:
-                configMapKeyRef:
-                  name: app-config
-                  key: ECR_IMAGE_URI
-            - name: ECR_VERSION_TAG
-              valueFrom:
-                configMapKeyRef:
-                  name: app-config
-                  key: VERSION_TAG
             - name: DB_NAME
               valueFrom:
                 configMapKeyRef:
